@@ -1,1 +1,1 @@
-web: python project.py
+web: python sora_bot:project.py
