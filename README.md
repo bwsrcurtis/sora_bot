@@ -7,4 +7,6 @@ This does mean the model may not always load correctly currently due to the way 
 
 [Here is a link to the model on HuggingFace](https://huggingface.co/CurtisBowser/DialoGPT-medium-sora)
 
+[And a live version hosted on PythonAnywhere. May take a minute to spin up.](https://sorabot.pythonanywhere.com/)
+
 ![Capture](https://user-images.githubusercontent.com/44857032/172023255-28e40c20-9dcc-4d73-bdf8-897380f6c2d5.JPG)
