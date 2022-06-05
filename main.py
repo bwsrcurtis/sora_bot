@@ -15,20 +15,21 @@ def query(payload):
 app = Flask(__name__)
 
 
-messages= []
-responses = []
 @app.route('/', methods=('GET', 'POST'))
 def hello_world():
     if request.method=='POST':
         message = request.form['message']
-        messages.append(message)
+        # messages.append(message)
         response = query(message)["generated_text"]
-        responses.append(response)
-        conversation_dict = list(zip(messages, responses))
+        # responses.append(response)
+        conversation_dict = (message, response)
         # conversation_dict.reverse()
-        return render_template('index.html', conversation_dict=conversation_dict[:5])
+        print(conversation_dict)
+        print(conversation_dict[0])
+        print(conversation_dict[1])
+        return render_template('index.html', message=conversation_dict[0], response=conversation_dict[1])
     else:
         return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
