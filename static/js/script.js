@@ -9,11 +9,8 @@ function updateConvo() {
     displayMessage.innerHTML = message;
     setTimeout(function(){
         displayResponse.innerHTML = sessionStorage.getItem(message)}, 1750);
-    // displayResponse.innerHTML = sessionStorage.getItem(message);
     return
 }
 
 
 document.querySelector(".form-overall").onsubmit = updateConvo();
-
-// const message = conversation.dataset.message;
