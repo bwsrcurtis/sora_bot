@@ -1,12 +1,17 @@
-function updateConvo(message) {
-    
+const conversation = document.querySelector(".message-container");
+
+function updateConvo() {
+    const displayMessage = document.querySelector(".message");
+    const displayResponse = document.querySelector(".result");
+    const message = conversation.dataset.message;
     const response = conversation.dataset.response;
     sessionStorage.setItem(message, response);
-    console.log(sessionStorage.getItem(message))
-    console.log(sessionStorage.key(response))
+    displayMessage.innerHTML = message;
+    displayResponse.innerHTML = sessionStorage.getItem(message);
     return
 }
 
-const conversation = document.querySelector(".message-container");
-const message = conversation.dataset.message;
-document.querySelector(".form-overall").onsubmit = updateConvo(message);
+
+document.querySelector(".form-overall").onsubmit = updateConvo();
+
+// const message = conversation.dataset.message;

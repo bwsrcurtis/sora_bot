@@ -19,10 +19,8 @@
     <div class="container d-flex justify-content-center">
         <div class="row justify-content-center">
             <div data-message="{{message}}" data-response="{{response}}" class="col-12 message-container">
-                {% for key in conversation_dict %}
-            <p class="message">{{key[0]}}</p>
-            <p class="result">{{key[1]}}</p>
-            {% endfor %}
+            <p class="message"></p>
+            <p class="result"></p>
         </div>
         <div class="col-12 form-container d-flex justify-content-center">
             <form class="form-overall" onsubmit="updateConvo()" method="POST">
