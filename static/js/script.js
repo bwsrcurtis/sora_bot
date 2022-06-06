@@ -7,7 +7,9 @@ function updateConvo() {
     const response = conversation.dataset.response;
     sessionStorage.setItem(message, response);
     displayMessage.innerHTML = message;
-    displayResponse.innerHTML = sessionStorage.getItem(message);
+    setTimeout(function(){
+        displayResponse.innerHTML = sessionStorage.getItem(message)}, 1750);
+    // displayResponse.innerHTML = sessionStorage.getItem(message);
     return
 }
 
